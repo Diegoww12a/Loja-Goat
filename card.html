@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.centralcart.com.br/stores/8746/theme/fc86d91d-c87f-426f-8747-39d1216c633c.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS local -->
+    <link rel="stylesheet" href="dist/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.centralcart.com.br/stores/8746/theme/fc86d91d-c87f-426f-8747-39d1216c633c.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS local -->
+    <link rel="stylesheet" href="dist/style.css" />
+    <link rel="stylesheet" href="src/tailwind.css" />
+  </head>
+
+  <body class="text-white bg-gray-800">
+    <div id="overlay "></div>
+     <div class="wireframe"></div>
+
+    <header
+      id="header1"
+      class="bg-[#091f53]/30 border-b-2 border-blue-700 py-4 fixed top-0 left-0 w-full z-50 backdrop-blur-sm"
+    >
+      <div
+        class="items-center px-5 py-4 flex justify-between lg:max-w-[90em] mx-auto"
+      >
+        <div class="logo text-white gap-x-3 text-2xl">
+          <a class="scroll-link" href="index.html">
+            <img class="w-32 border-" src="imagens/goat.png" alt=""
+          /></a>
+          <h1 class="text- font-light">GOAT SKINS</h1>
+        </div>
+
+        <div class="menu hidden lg:flex">
+          <li class="list-none flex gap-x-7">
+            <ul
+              class="border-2 border-blue-600/60 cursor-pointer text-white hover:bg-blue-500/20 transition-all p-2 px-5 rounded-lg"
+            >
+              Home
+            </ul>
+            <ul
+              class="border-2 border-blue-600/60 cursor-pointer text-white hover:bg-blue-500/20 transition-all p-2 px-5 rounded-lg"
+            >
+              Discord
+            </ul>
+            <ul
+              class="border-2 border-blue-600/60 cursor-pointer text-white hover:bg-blue-500/20 transition-all p-2 px-5 rounded-lg"
+            >
+              Produtos
+            </ul>
+            <ul
+              class="border-2 border-blue-600/60 cursor-pointer text-white hover:bg-blue-500/20 transition-all p-2 px-5 rounded-lg"
+            >
+              Confiança
+            </ul>
+          </li>
+        </div>
+
+        <div class="lg:hidden">
+          <button
+            class="toggle-btn border-2 border-blue-400 text-white p-2 rounded-lg"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- <a href="index.html">← Voltar</a> -->
+
+    <aside class="" id="menuCarrinho">
+      <div class="flex items-center justify-between">
+        <h3>🛒 Carrinho</h3>
+        <button id="fechar">X</button>
+      </div>
+
+      <div id="carrinho"></div>
+      <p class="mx-auto" id="total"></p>
+      <button class="border-2 p-2 px-5 rounded-lg" onclick="finalizarCompra()">
+        Finalizar Compra
+      </button>
+    </aside>
+    <div id="overlay"></div>
+    <button id="toggle"></button>
+
+    <div id="produtos" class="flex max-w-7xl mx-auto border-">
+      <!-- Produto aparece aqui via script.js -->
+    </div>
+
+    <script src="js/produtos.js"></script>
+  </body>
+</html>

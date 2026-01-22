@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" type="image/x-icon" href="https://cdn.centralcart.com.br/stores/8746/theme/fc86d91d-c87f-426f-8747-39d1216c633c.png">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- CSS local -->
+  <link rel="stylesheet" href="dist/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="src/tailwind.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap" rel="stylesheet">
+
+  <title>Ztk PVP</title>
+</head>
+
+<body id="volta" class=" font-">
+
+
+<header id="header1" class="bg-[#091f53]/30 border-b-2 border-blue-700 py-4 fixed top-0 left-0 w-full z-50 backdrop-blur-sm">
+  <div class="items-center px-5 py-4 flex justify-between lg:max-w-[90em] mx-auto">
+
+   <div  class="logo text-white   gap-x-3 text-2xl">
+    <a  onclick="filtrarPorCategoria('all')" class="scroll-link" href="#header1">  <img class="w-32 border- " src="imagens/goat.png" alt=""></a>
+      <h1 class="text- font-light">GOAT SKINS</h1>
+    </div>
+
+    <div class="menu hidden lg:flex">
+      <li class="list-none flex gap-x-7">
+       <a href="#volta"> <ul class="border-2 border-blue-600/60 cursor-pointer text-white hover:bg-blue-500/20 transition-all p-2 px-5 rounded-lg">Home</ul></a>
+       <a target="_blank" href="https://discord.gg/AHVWYRD8"> <ul class="border-2 border-blue-600/60 cursor-pointer text-white hover:bg-blue-500/20 transition-all p-2 px-5 rounded-lg">Discord</ul></a>
+       <a href="#shop"><ul class="border-2 border-blue-600/60 cursor-pointer text-white hover:bg-blue-500/20 transition-all p-2 px-5 rounded-lg">Produtos</ul></a> 
+       <a  href="confianca.html"> <ul class="border-2 border-blue-600/60 cursor-pointer text-white hover:bg-blue-500/20 transition-all p-2 px-5 rounded-lg">Confiança</ul></a>
+      </li>
+   </div>
+
+    <div class="lg:hidden ">
+      <button class="toggle-btn border-2  border-blue-400 text-white p-2 rounded-lg">
+        <i data-lucide="menu"></i>
+      </button>
+   </div>
+
+  </div>
+</header>
+
+
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="fixed top-0 right-0 h-full w-full bg-[#091f53] text-white p-5 z-50 
+transform translate-x-full transition-all duration-300 overflow-y-auto">
+
+  <button id="closeSidebar" class="mb-5">
+    <i data-lucide="x"></i>
+  </button>
+
+  <div class="flex flex-col gap-4">
+
+     
+    <div class="border-2 border-blue-600/60 p-3 rounded-lg cursor-pointer">Home</div>
+    <div class="border-2 border-blue-600/60 p-3 rounded-lg cursor-pointer">Discord</div>
+    <!-- <div class="border-2 border-blue-600/60 p-3 rounded-lg cursor-pointer">Produtos</div> -->
+    <div class="border-2 todos border-blue-600/60 p-3 rounded-lg cursor-pointer">Confiança</div>
+
+    <!-- Botão categorias -->
+   <div id="toggleCategorias" class="border-2 border-blue-600/60 p-3 rounded-lg cursor-pointer flex items-center justify-between">
+  Produtos
+  <span id="seta" style="transition: .2s;">▼</span>
+</div>
+
+
+    <!-- Lista (escondida) -->
+    <div  id="listaCategorias" class="flex flex-col gap-3 mt-2 hidden">
+
+      <button  onclick="filtrarPorCategoria('all')" class="border-2 todos border-blue-400 p-3 rounded-lg text-left">
+        Todos 
+      </button>
+
+      <button onclick="filtrarPorCategoria('pt')" class="border-2 todos border-blue-400 p-3 rounded-lg text-left">
+        Armas 
+      </button>
+
+      <button onclick="filtrarPorCategoria('car')" class="border-2 todos border-blue-400 p-3 rounded-lg text-left">
+        Camisas 
+      </button>
+
+      <button onclick="filtrarPorCategoria('colete')" class="border-2 border-blue-400 p-3 rounded-lg text-left">
+        Coletes 
+      </button>
+
+      <button onclick="filtrarPorCategoria('calca')" class="border-2 todos border-blue-400 p-3 rounded-lg text-left">
+        Calças 
+      </button>
+
+      <button onclick="filtrarPorCategoria('jaqueta')" class="border-2 todos border-blue-400 p-3 rounded-lg text-left">
+        Jaqueta 
+      </button>
+
+      <button onclick="filtrarPorCategoria('mascara')" class="border-2 todos border-blue-400 p-3 rounded-lg text-left">
+        Máscaras/Chapéu 
+      </button>
+
+      <button onclick="filtrarPorCategoria('luva')" class="border-2 todos border-blue-400 p-3 rounded-lg text-left">
+        Luvas 
+      </button>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  <main class="mt-52 border-">
+    <div class="wireframe"></div>
+
+    <section  class="border- font-  ">
+      <div class="border-  mt-10"><!--container1-->
+        <div class="border- items-center lg:flex flex- justify-between  px-4 mt- lg:max-w-[90em] mx-auto">
+          <div class="border- ">
+            <h1 class="text-[5em]  text-white">GOAT SKINS</h1>
+            <p class="text-white text-2xl mt-5">Melhores Preço do mercado estao aqui na Goat Skins</p>
+            <div class="border- flex gap-6  mt-10 ">
+              <a href="#compra"> <button  class="border-2 gap-y-20 border-blue-500 hover:bg-blue-500/40 transition-all  p-3 px-8 rounded-lg text-white">Compre agora</button></a>
+              <a target="_blank" href="https://discord.gg/AHVWYRD8"> <button  class="border-2 gap-y-20 border-blue-500 hover:bg-blue-500/40 transition-all  p-3 px-8 rounded-lg text-white">Discord</button></a>
+             
+            </div>
+          </div>
+         <div class="flex mt-10 justify-center ">
+          <img class="w-[]" src="imagens/camisa.png" alt="">
+         </div>
+        </div>
+      </div><!--fim container1-->
+    </section>
+   
+    <div id="todos">
+      <p id="compra"></p>
+      <p id="shop"></p>
+    </div>
+
+
+   
+
+
+
+   <section   class="mt-52">
+   <div class="min-h-[vh]  lg:flex-row flex-col lg:max-w-[90em] border-    mx-auto  px-4 flex gap-10">
+    
+
+
+    <div  class="colona hidden lg:flex mx-auto lg:mx-0  border-2 border-blue-400 p-3 rounded-lg  sticky    lg:sticky top-[130px] w-[76%] lg:w-[23em] h-[665px]">
+
+     <div class="flex   w-full text-white gap-y-5 flex-col">
+     <button onclick="filtrarPorCategoria('all', 'todos')" class="border-2 hover:bg-blue-500/20 transition-all border-blue-400 px-5 rounded-xl p-4 w- flex">Todos
+       (<span id="c-all"></span>)
+     </button>
+
+     <button onclick="filtrarPorCategoria('pt')" class="border-2 hover:bg-blue-500/20 transition-all border-blue-400 px-5 rounded-xl p-4 w- flex">Armas
+       (<span id="c-pt"></span>)
+     </button>
+
+     <button onclick="filtrarPorCategoria('car')" class="border-2 hover:bg-blue-500/20 transition-all border-blue-400 px-5 rounded-xl p-4 w- flex">Camisas
+       (<span id="c-car"></span>)
+     </button>
+
+     <button onclick="filtrarPorCategoria('colete')" class="border-2 hover:bg-blue-500/20 transition-all border-blue-400 px-5 rounded-xl p-4 w- flex">Coletes
+       (<span id="c-colete"></span>)
+     </button>
+
+     <button onclick="filtrarPorCategoria('calca')" class="border-2 hover:bg-blue-500/20 transition-all border-blue-400 px-5 rounded-xl p-4 w- flex">Calças
+      (<span id="c-calca"></span>)
+     </button>
+
+     <button onclick="filtrarPorCategoria('jaqueta')" class="border-2 hover:bg-blue-500/20 transition-all border-blue-400 px-5 rounded-xl p-4 w- flex">Jaqueta
+      (<span id="c-jaqueta"></span>)
+     </button>
+
+     <button onclick="filtrarPorCategoria('mascara')" class="border-2 hover:bg-blue-500/20 transition-all border-blue-400 px-5 rounded-xl p-4 w- flex">Mascaras/Chapéu
+      (<span id="c-mascara"></span>)
+     </button>
+
+     <button onclick="filtrarPorCategoria('luva')" class="border-2 hover:bg-blue-500/20 transition-all border-blue-400 px-5 rounded-xl p-4 w- flex">Luvas
+      (<span id="c-luva"></span>)
+     </button>
+
+    </div>
+</div>
+
+
+    
+
+   <div   data-aos="fade-up" class=" gap- border- mt-14 lg:mt-0 mx-auto lg:mx-0 w-full border-  ">
+     
+
+  <div class=" top- mt-  lg:hidden  left- w-full z-50">
+
+  <div id="btnCategorias" class="bg-blue-900/60 hover:bg-blue-600/30 transition rounded-lg mt- mb-10 text-white p-4 cursor-pointer">
+    Categorias <span id="setaCat">▼</span>
+
+  </div>
+
+ <div id="boxCategorias" 
+     class="bg-[#0a1b3f]/70 hidden backdrop-blur-md border border-blue-500/40 shadow-xl 
+            flex flex-col text-white p-4 mt-5 rounded-2xl">
+
+    <button onclick="filtrarPorCategoriaa('all')" 
+            class="border border-blue-400/40  bg-blue-900/20 hover:bg-blue-800/40 transition p-3 rounded-lg text-left">
+        Todos
+    </button>
+
+    <button  onclick="filtrarPorCategoriaa('pt')" 
+            class="border border-blue-400/40 sai  bg-blue-900/20 hover:bg-blue-800/40 transition p-3 mt-3 rounded-lg text-left">
+        Armas
+    </button>
+
+    <button onclick="filtrarPorCategoriaa('car')" 
+            class="border border-blue-400/40 bg-blue-900/20 hover:bg-blue-800/40 transition p-3 mt-3 rounded-lg text-left">
+        Camisas
+    </button>
+
+    <button onclick="filtrarPorCategoriaa('colete')" 
+            class="border border-blue-400/40 bg-blue-900/20 hover:bg-blue-800/40 transition p-3 mt-3 rounded-lg text-left">
+        Coletes
+    </button>
+
+    <button onclick="filtrarPorCategoriaa('calca')" 
+            class="border border-blue-400/40 bg-blue-900/20 hover:bg-blue-800/40 transition p-3 mt-3 rounded-lg text-left">
+        Calças
+    </button>
+
+    <button onclick="filtrarPorCategoriaa('jaqueta')" 
+            class="border border-blue-400/40 bg-blue-900/20 hover:bg-blue-800/40 transition p-3 mt-3 rounded-lg text-left">
+        Jaqueta
+    </button>
+
+    <button onclick="filtrarPorCategoriaa('mascara')" 
+            class="border border-blue-400/40 bg-blue-900/20 hover:bg-blue-800/40 transition p-3 mt-3 rounded-lg text-left">
+        Máscaras/Chapéu
+    </button>
+
+    <button onclick="filtrarPorCategoriaa('luva')" 
+            class="border border-blue-400/40 bg-blue-900/20 hover:bg-blue-800/40 transition p-3 mt-3 rounded-lg text-left">
+        Luvas
+    </button>
+
+</div>
+
+</div>
+    
+    <h1  id="tituloCategoria" class="text-3xl border-2 lg:w-[300px] lg:mx-0 text-white mx-auto px-5 p-2 rounded-lg bg-blue-400/20 border-blue-500   pb-  ">CAMISAS</h1>
+     <div   id="produtos" class="grid grid-cols-1   border- mt-10 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3   gap-6"></div>
+ 
+     <h1  data-aos="fade-up" id="ca" class="text-3xl mt-20 border-2 lg:mx-0 lg:w-64 text-white mx- px-5 p-2 rounded-lg bg-blue-400/20 border-blue-500   pb-  ">COLETES</h1>
+     <div id="camisa" class="grid grid-cols-1  border- mt-10 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3   gap-6"></div>
+
+      <h1  data-aos="fade-up" id="cas" class="text-3xl mt-20 border-2 lg:mx-0 lg:w-64 text-white mx- px-5 p-2 rounded-lg bg-blue-400/20 border-blue-500   pb-  ">ARMAS</h1>
+     <div id="colete" class="grid grid-cols-1  border- mt-10 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3   gap-6"></div>
+
+     
+      <h1  data-aos="fade-up" id="cal" class="text-3xl mt-20 border-2 lg:mx-0 lg:w-64 text-white mx- px-5 p-2 rounded-lg bg-blue-400/20 border-blue-500   pb-  ">CALÇA</h1>
+     <div id="calca" class="grid grid-cols-1  border- mt-10 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3   gap-6"></div>
+
+     
+      <h1  data-aos="fade-up" id="ja" class="text-3xl mt-20 border-2 lg:mx-0 lg:w-64 text-white mx- px-5 p-2 rounded-lg bg-blue-400/20 border-blue-500   pb-  ">Jaqueta</h1>
+     <div id="jaqueta" class="grid grid-cols-1  border- mt-10 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3   gap-6"></div>
+
+     
+      <h1  data-aos="fade-up" id="ma" class="text-3xl mt-20 border-2 lg:mx-0 lg:w-64 text-white mx- px-5 p-2 rounded-lg bg-blue-400/20 border-blue-500   pb-  ">Mascaras/Chapéu</h1>
+     <div id="mascara" class="grid grid-cols-1  border- mt-10 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3   gap-6"></div>
+
+
+      <h1  data-aos="fade-up" id="lu" class="text-3xl mt-20 border-2 lg:mx-0 lg:w-64 text-white mx- px-5 p-2 rounded-lg bg-blue-400/20 border-blue-500   pb-  ">Luvas</h1>
+     <div id="luva" class="grid grid-cols-1  border- mt-10 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3   gap-6"></div>
+
+
+
+    </div>
+    
+
+    </div>
+</section>
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script src="js/produto.js"></script> -->
+  <script src="js/script.js"></script>
+  <!-- <script src="produtos.js"></script> -->
+  <div  id="detalhes"></div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
