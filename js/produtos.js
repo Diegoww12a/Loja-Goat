@@ -137,7 +137,7 @@ function carregarProdutoIndividual() {
     
     <p class="text-2xl">R$ ${p.preco.toFixed(2)}</p>
 
-    <button id="add" class="btn mt-10 lg:mt-auto border-2 border-transparent  hover:border-2 hover:border-[#5996db] p-5 rounded-xl bg-blue-500 w-full" onclick="adicionarAoCarrinho(${p.id})">
+    <button id="add" class="btn mt-10 lg:mt-5  border-2 border-transparent  hover:border-2 hover:border-[#5996db] p-5 rounded-xl bg-blue-500 w-full" onclick="adicionarAoCarrinho(${p.id})">
       Comprar
     </button>
     </div>
